@@ -41,14 +41,7 @@ console.log(findTheFirstNumber([1, "x", 2, "y"])); // outputs 0
 
 ```js
 console.log(makePerson("bob", "smith", 42));
-/*
-outputs 
-{
-    firstname: "bob",
-    lastname: "smith",
-    age: 42
-}
-*/
+// outputs { firstname: 'bob', lastname: 'smith', age: 42 }
 ```
 
 5. Write a function named `getFullName` that accepts an object with the fields `firstname` and `lastname`. The function returns a concatenation of the `firstname` and `lastname` fields with a space between them.
