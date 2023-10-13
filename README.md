@@ -1,5 +1,108 @@
 # JavaScript Loops, Arrays, and Objects Practice Assessment
 
-As the name implies, this assessment is meant to be used as practice for the JavaScript Loops, Arrays, and Objects Assessment. I tried to create questions that are similar to, but not duplicates of, the questions in the real assessment's various branches. Please feel free to make branches of this practice to suit your cohort's upcoming real assessment.
+This is a practice assessment to help prepare you for the upcoming real assessment.
 
-If you don't intend to do an in-class walkthrough of this practice exam for your cohort, I encourage you to record a video of you solving it and make it available to your students.
+#### NOTE: there are no Jasmine test cases for this practice assessment. Test your solutions with the examples given below.
+
+## Suggested Test Duration: 2 hours
+
+## Problems
+
+Each problem will ask you to write a function, and is followed by a code sample that demonstrates using the function.
+The code samples are intended to show the expected inputs and outputs to the functions, but are not themselves part of
+the solution.
+
+---
+
+1. Write a function named `isNumber` that accepts a value of any type and returns the boolean `true` or the boolean `false` based on whether the parameter is a number.
+
+```js
+console.log(isNumber(5)); // outputs true
+console.log(isNumber("bob")); // outputs false
+console.log(isNumber(true)); // outputs false
+```
+
+2. Write a function named `sumOfStringLengths` that accepts an array of strings. The function returns the sum of the lengths of all the strings in the array.
+
+```js
+console.log(sumOfStringLengths([""])); // outputs 0
+console.log(sumOfStringLengths(["the", "big", "pizza"])); // outputs 11
+```
+
+3. Write a function named `findTheFirstNumber` that accepts an array of any types and returns the index of the first element in the array that is a number. Use your `isNumber` function from above (problem #1). Return -1 if no number is in the array.
+
+```js
+console.log(findTheFirstNumber(["the", "big", 3, "pizza"])); // outputs 2
+console.log(findTheFirstNumber(["the", "big", "pizza"])); // outputs -1
+console.log(findTheFirstNumber([1, "x", 2, "y"])); // outputs 0
+```
+
+4. Write a function called `makePerson` that accepts two strings and a number as parameters and returns an object where the first string is the object's `firstname` field, the second string is the object's `lastname` field, and the number is the object's `age` field.
+
+```js
+console.log(makePerson("bob", "smith", 42));
+/*
+outputs 
+{
+    firstname: "bob",
+    lastname: "smith",
+    age: 42
+}
+*/
+```
+
+5. Write a function named `getFullName` that accepts an object with the fields `firstname` and `lastname`. The function returns a concatenation of the `firstname` and `lastname` fields with a space between them.
+
+```js
+console.log(getFullName({
+	firstname: "Bob",
+	lastname: "smith"
+})); // outputs Bob smith
+
+console.log(getFullName({
+	firstname: "RAGNAR",
+	lastname: "Jonez",
+	age: 42
+})); // outputs RAGNAR Jonez
+```
+
+6. Write a function called `getAverageAge` that accepts an array of objects. Each object has an `age` field. The function returns the average of all the ages in the array's objects. You may assume that no array will be empty and that all objects have an `age` field that is a number.
+
+```js
+console.log(getAverageAge([
+	{
+		age: 20
+	},
+	{
+		firstname: "bob",
+		age: 42
+	}
+])); // outputs 31.0
+```
+
+7. Write a function called `findShortestFullName` that accepts an array of objects. Each object has the fields `firstname` and `lastname`. The function returns the full name that has the shortest length. A full name is the concatenation of `firstname` and `lastname` fields with a space between them. If more than one full name have the same shortest length, your function will return the FIRST full name that has the shortest length. You may assume that no array will be empty and that all objects have `firstname` and `lastname` fields that are strings. Use your `getFullName` function from problem 4.
+
+```js
+console.log(getAverageAge([
+	{
+		firstname: "ragnar",
+		lastname: "smith",
+		age: 42
+	}, 
+	{
+		firstname: "tom",
+		lastname: "cat"
+	},
+	{
+		firstname: "sue",
+		lastname: "xyz"
+	}
+])); // outputs tom cat
+```
+
+8. Write a function called `getLengthOfWords` that takes a string and returns the total number of characters of the words in the string. A "word" is defined as non-whitespace characters separated from other words by a space. Use your `sumOfStringLengths` function from problem 2.
+
+```js
+console.log(getLengthOfWords("the quick brown fox")); // outputs 16
+console.log(getLengthOfWords("1 fish 2 fish red fish blue fish")); // outputs 25
+```
