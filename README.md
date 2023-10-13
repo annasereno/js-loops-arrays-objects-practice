@@ -29,7 +29,7 @@ console.log(sumOfStringLengths([""])); // outputs 0
 console.log(sumOfStringLengths(["the", "big", "pizza"])); // outputs 11
 ```
 
-3. Write a function named `findTheFirstNumber` that accepts an array of any types and returns the index of the first element in the array that is a number. Use your `isNumber` function from above (problem #1). Return -1 if no number is in the array.
+3. Write a function named `findTheFirstNumber` that accepts an array of any types and returns the index of the first element in the array that is a number. Use your `isNumber` function from problem 1. Return -1 if no number is in the array.
 
 ```js
 console.log(findTheFirstNumber(["the", "big", 3, "pizza"])); // outputs 2
