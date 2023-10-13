@@ -76,7 +76,7 @@ console.log(getAverageAge([
 7. Write a function called `findShortestFullName` that accepts an array of objects. Each object has the fields `firstname` and `lastname`. The function returns the full name that has the shortest length. A full name is the concatenation of `firstname` and `lastname` fields with a space between them. If more than one full name have the same shortest length, your function will return the FIRST full name that has the shortest length. You may assume that no array will be empty and that all objects have `firstname` and `lastname` fields that are strings. Use your `getFullName` function from problem 4.
 
 ```js
-console.log(getAverageAge([
+console.log(findShortestFullName([
 	{
 		firstname: "ragnar",
 		lastname: "smith",
